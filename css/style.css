@@ -5,7 +5,7 @@ html{
 body{
     margin: 0 auto;
     background-color: #222;
-    text-transform:lowercase;
+    
 }
 
 /* chat styling */
@@ -90,6 +90,7 @@ body{
 
 #userinput{
     width: 75%;
+    
 }
 .textInput{
     float: left;

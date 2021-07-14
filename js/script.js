@@ -42,7 +42,7 @@ function getTime(){
 // FIRST BOT MESSAGE
 
 function firstBotMessage(){
-    let firstMessage = "How is it going";
+    let firstMessage = "Hey, i am ibn's chatBot";
     document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
     let time = getTime();
