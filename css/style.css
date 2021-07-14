@@ -1,0 +1,169 @@
+html{
+    scroll-behavior: smooth;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    margin: 0 auto;
+    background-color: #222;
+    text-transform:lowercase;
+}
+
+/* chat styling */
+
+.chat-bar-collapsible{
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+.collapsible{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    outline: none;
+    border: 2px solid white;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+.content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: white;
+}
+.full-chat-block{
+    width: 350px;
+    background-color: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    transition: max-height 0.3s ease-out;
+}
+.outer-container{
+    min-height: 500px;
+    bottom: 0;
+    position: relative; 
+}
+.chat-container{
+   max-height: 500px;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   scroll-behavior: smooth;
+   hyphens: auto;
+}
+.chat-container::-webkit-scrollbar{
+    display: none;
+}
+.chat-bar-input-block{
+    display: flex;
+    float:left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(182, 177, 177);
+    border-radius: 10px 10px 5px 5px;
+    padding: 10px 10px 10px 10px;
+}
+.chat-bar-icon{
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+
+}
+#chat-icon{
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+#chat-icon:hover{
+    opacity: 0.7;
+}
+
+#userinput{
+    width: 75%;
+}
+.textInput{
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    color: #000;
+}
+.userText{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear:both;
+}
+.userText span{
+    line-height: 1.2rem;
+    display: inline-block;
+    background-color: green;
+    padding: 8px;
+    border-radius:8px ;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup 0.5s forwards ;
+}
+.botText{
+    color: #000;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+}
+.botText span{
+    line-height: 1.2rem;
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 8px;
+    border-radius:8px ;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup 0.5s forwards ;
+}
+@keyframes floatup {
+    from{
+        transform: translateY(14px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width:600px) {
+    .full-chat-block{
+        width: 100%;
+        border-radius: none;
+    }
+    .chat-bar-collapsible{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+    .collapsible{
+        width: 100%;
+        border: 0px;
+        border-top: 2px solid white;
+        border-radius: none;
+    }
+}

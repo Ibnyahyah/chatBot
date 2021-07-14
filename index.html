@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="chat-bar-collapsible">
+        <button id="chat-btn" class="collapsible">Send a message</button>
+      
+
+      <div class="content">
+        <div class="full-chat-block">
+
+          <!-- MESSAGE CONTAINER -->
+          <div class="outer-container">
+            <div class="chat-container">
+
+              <!-- MESSAGE -->
+              <div id="chatBox">
+                <h5 id="chat-timeStamp"></h5>
+                <p id="botStarterMessage" class="botText">
+                  <span>loading</span>
+                </p>
+              </div>
+
+              <!-- USER INPUT BOX -->
+              <div class="chat-bar-input-block">
+                  <div id="userInput">
+                      <input id="text-input" class="textInput" type="text" name="msg" placeholder="Tap 'ENTER' to send a message">
+                      <p></p>
+                  </div>
+                  <div class="chat-bar-icon">
+                      <span id="chat-icon" style="padding: 5px; border: 1px solid white; cursor: pointer; background-color: red;" onclick="sendButton()">send</span>
+                      <span id="chat-icon" style="padding: 5px; border: 1px solid white; background-color: blue; cursor: pointer;" onclick="likeButton()">like</span>
+                  </div>
+              </div>
+              <div id="chat-bar-bottom">
+                  <p></p>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/response.js"></script>
+  </body>
+</html>
